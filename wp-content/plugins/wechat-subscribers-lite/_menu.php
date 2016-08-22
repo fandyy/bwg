@@ -3,6 +3,7 @@
  * Settings Page, It's required by WPWSLGeneral Class only.
  *
  */
+
 $options=get_option(WPWSL_SETTINGS_OPTION);
 global $token;
 $token=isset($options['token'])?$options['token']:'';
@@ -10,6 +11,7 @@ $token=isset($options['token'])?$options['token']:'';
 
 require_once( 'class-wpwsl-list-table.php' );
 require_once( 'wx.class.php' );
+
 
 if(isset($_GET['action']) && isset($_GET['action2'])){
 	if($_GET['action']=='delete' || $_GET['action2']=='delete'){
@@ -42,9 +44,6 @@ $raw=get_posts($args);
 
 $weixin_menu = ($_POST['weixin_menu']);
 
-
-
-
 $post_data = $weixin_menu;
 if($post_data){
 
@@ -53,6 +52,7 @@ if($post_data){
     $wx = new WXTest($token);
 
     $access_token = $wx->getAccessToken();
+
 
     $url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token={$access_token}";
 
@@ -73,7 +73,6 @@ if($post_data){
         echo '失败';
         exit;
     }
-
 
 }
 

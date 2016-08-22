@@ -1,0 +1,175 @@
+0000.000 (0) Opened log file at time: Sun, 31 Jul 2016 01:08:01 +0000 on http://fy913m.cn/wordpress
+0000.002 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.12.17 WP: 4.5.3 PHP: 5.6.22 (Linux fy913m.cn 2.6.32-042stab116.1 #1 SMP Wed May 4 16:21:02 MSK 2016 x86_64) MySQL: 5.5.48 WPLANG: en_US Server: nginx/1.10.0 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 20.5M | 21.3M) multisite: N openssl: OpenSSL 1.0.1e-fips 11 Feb 2013 mcrypt: Y LANG:  ZipArchive::addFile: Y
+0000.002 (0) Free space on disk containing Updraft's temporary directory: 19772.2 MB
+0000.004 (0) Tasks: Backup files: 1 (schedule: daily) Backup DB:  (schedule: daily)
+0000.004 (0) Processed schedules. Combining jobs from identical schedules. Tasks now: Backup files: 1 Backup DB: 1
+0000.006 (0) Requesting semaphore lock (fd) (apparently via scheduler: last_scheduled_action_called_at=1469885805, seconds_ago=41476)
+0000.008 (0) Set semaphore last lock (fd) time to 2016-07-31 01:08:01
+0000.008 (0) Semaphore lock (fd) complete
+0000.011 (0) Backup run: resumption=0, nonce=f3270d0e488c, begun at=1469927281 (0s ago), job type=backup
+0000.012 (0) Scheduling a resumption (1) after 300 seconds (1469927581) in case this run gets aborted
+0000.021 (0) OpenVZ; reported memory: 512 MB (will not use BinZip)
+0000.022 (0) Creation of backups of directories: beginning
+0000.024 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0000.775 (0) Total entities for the zip file: 230 directories, 1844 files (0 skipped as non-modified), 22.2 MB
+0000.803 (0) Zip: backup_2016-07-31-0108_fy913m_f3270d0e488c-plugins.zip.tmp: 100 files added (on-disk size: 0 KB)
+0000.831 (0) Zip: backup_2016-07-31-0108_fy913m_f3270d0e488c-plugins.zip.tmp: 200 files added (on-disk size: 0 KB)
+0000.862 (0) Zip: backup_2016-07-31-0108_fy913m_f3270d0e488c-plugins.zip.tmp: 300 files added (on-disk size: 0 KB)
+0000.890 (0) Zip: backup_2016-07-31-0108_fy913m_f3270d0e488c-plugins.zip.tmp: 400 files added (on-disk size: 0 KB)
+0000.916 (0) Zip: backup_2016-07-31-0108_fy913m_f3270d0e488c-plugins.zip.tmp: 500 files added (on-disk size: 0 KB)
+0000.917 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (3.7 MB, 1844 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0001.344 (0) Zip: backup_2016-07-31-0108_fy913m_f3270d0e488c-plugins.zip.tmp: 600 files added (on-disk size: 1836.7 KB)
+0001.371 (0) Zip: backup_2016-07-31-0108_fy913m_f3270d0e488c-plugins.zip.tmp: 700 files added (on-disk size: 1836.7 KB)
+0001.401 (0) Zip: backup_2016-07-31-0108_fy913m_f3270d0e488c-plugins.zip.tmp: 800 files added (on-disk size: 1836.7 KB)
+0001.447 (0) Zip: backup_2016-07-31-0108_fy913m_f3270d0e488c-plugins.zip.tmp: 900 files added (on-disk size: 1836.7 KB)
+0001.492 (0) Zip: backup_2016-07-31-0108_fy913m_f3270d0e488c-plugins.zip.tmp: 1000 files added (on-disk size: 1836.7 KB)
+0001.507 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (2.3 MB, 1844 files batched, 501 (1002) added so far); re-opening (prior size: 1836.7 KB)
+0001.741 (0) Zip: backup_2016-07-31-0108_fy913m_f3270d0e488c-plugins.zip.tmp: 1100 files added (on-disk size: 3503.1 KB)
+0001.790 (0) Zip: backup_2016-07-31-0108_fy913m_f3270d0e488c-plugins.zip.tmp: 1200 files added (on-disk size: 3503.1 KB)
+0001.834 (0) Zip: backup_2016-07-31-0108_fy913m_f3270d0e488c-plugins.zip.tmp: 1300 files added (on-disk size: 3503.1 KB)
+0001.881 (0) Zip: backup_2016-07-31-0108_fy913m_f3270d0e488c-plugins.zip.tmp: 1400 files added (on-disk size: 3503.1 KB)
+0001.930 (0) Zip: backup_2016-07-31-0108_fy913m_f3270d0e488c-plugins.zip.tmp: 1500 files added (on-disk size: 3503.1 KB)
+0001.932 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (2.2 MB, 1844 files batched, 501 (1503) added so far); re-opening (prior size: 3503.1 KB)
+0002.179 (0) Zip: backup_2016-07-31-0108_fy913m_f3270d0e488c-plugins.zip.tmp: 1600 files added (on-disk size: 4220.8 KB)
+0002.214 (0) Zip: backup_2016-07-31-0108_fy913m_f3270d0e488c-plugins.zip.tmp: 1700 files added (on-disk size: 4220.8 KB)
+0002.245 (0) Zip: backup_2016-07-31-0108_fy913m_f3270d0e488c-plugins.zip.tmp: 1800 files added (on-disk size: 4220.8 KB)
+0004.013 (0) Created plugins zip (0) - 8330.1 KB in 4 s (2089 KB/s) (SHA1 checksum: a39485301032415219ebb8d2c4e856e7fa5958d9)
+0004.016 (0) Beginning creation of dump of themes (split every: 400 MB)
+0004.067 (0) Total entities for the zip file: 23 directories, 153 files (0 skipped as non-modified), 3.1 MB
+0004.089 (0) Zip: backup_2016-07-31-0108_fy913m_f3270d0e488c-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0004.309 (0) Created themes zip (0) - 2413.5 KB in 0.3 s (8543.2 KB/s) (SHA1 checksum: 670ad54f0c8d3e4b1f01eb3ffc12c3184a5edf13)
+0004.311 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone
+0004.311 (0) Looking for candidates to back up in: /home/wwwroot/default/wordpress/wp-content/uploads
+0004.312 (0) finding files: 2016: adding to list (1)
+0004.313 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0004.316 (0) Total entities for the zip file: 2 directories, 0 files (0 skipped as non-modified), 0 MB
+0004.334 (0) Created uploads zip (0) - 0.2 KB in 0 s (11.6 KB/s) (SHA1 checksum: 510d9e195179ffee99bc3bbab8565a1ff29111c4)
+0004.336 (0) Beginning backup of other directories found in the content directory (index: 0)
+0004.337 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0004.337 (0) Looking for candidates to back up in: /home/wwwroot/default/wordpress/wp-content
+0004.338 (0) finding files: upgrade: skipping: excluded by options
+0004.338 (0) finding files: plugins: skipping: this is the plugins directory
+0004.339 (0) finding files: uploads: skipping: this is the uploads directory
+0004.339 (0) finding files: themes: skipping: this is the themes directory
+0004.340 (0) finding files: index.php: adding to list (1)
+0004.340 (0) finding files: updraft: skipping: this is the updraft directory
+0004.341 (0) finding files: languages: adding to list (2)
+0004.347 (0) Total entities for the zip file: 2 directories, 15 files (0 skipped as non-modified), 1.9 MB
+0004.616 (0) Created others zip (0) - 564.9 KB in 0.3 s (2070.8 KB/s) (SHA1 checksum: 8bc54bc810f7220e69512fedadb61f8b34b955bf)
+0004.620 (0) Saving backup status to database (elements: 8)
+0004.622 (0) Beginning creation of database dump (WordPress DB)
+0004.626 (0) Table wp_options: Total expected rows (approximate): 120
+0004.672 (0) Table wp_options: Total rows added: 209 in 0.05 seconds
+0004.674 (0) Table wp_options: finishing file (backup_2016-07-31-0108_fy913m_f3270d0e488c-db-table-wp_options.table.gz - 154 KB)
+0004.676 (0) Table wp_users: Total expected rows (approximate): 1
+0004.678 (0) Table wp_users: Total rows added: 1 in 0.00 seconds
+0004.679 (0) Table wp_users: finishing file (backup_2016-07-31-0108_fy913m_f3270d0e488c-db-table-wp_users.table.gz - 0.5 KB)
+0004.681 (0) Table wp_usermeta: Total expected rows (approximate): 22
+0004.683 (0) Table wp_usermeta: Total rows added: 22 in 0.00 seconds
+0004.684 (0) Table wp_usermeta: finishing file (backup_2016-07-31-0108_fy913m_f3270d0e488c-db-table-wp_usermeta.table.gz - 1.4 KB)
+0004.687 (0) Table wp_commentmeta: Total expected rows (approximate): 0
+0004.689 (0) Table wp_commentmeta: Total rows added: 0 in 0.00 seconds
+0004.690 (0) Table wp_commentmeta: finishing file (backup_2016-07-31-0108_fy913m_f3270d0e488c-db-table-wp_commentmeta.table.gz - 0.4 KB)
+0004.692 (0) Table wp_comments: Total expected rows (approximate): 1
+0004.694 (0) Table wp_comments: Total rows added: 1 in 0.00 seconds
+0004.695 (0) Table wp_comments: finishing file (backup_2016-07-31-0108_fy913m_f3270d0e488c-db-table-wp_comments.table.gz - 0.7 KB)
+0004.697 (0) Table wp_links: Total expected rows (approximate): 0
+0004.699 (0) Table wp_links: Total rows added: 0 in 0.00 seconds
+0004.699 (0) Table wp_links: finishing file (backup_2016-07-31-0108_fy913m_f3270d0e488c-db-table-wp_links.table.gz - 0.4 KB)
+0004.702 (0) Table wp_postmeta: Total expected rows (approximate): 20
+0004.704 (0) Table wp_postmeta: Total rows added: 20 in 0.00 seconds
+0004.705 (0) Table wp_postmeta: finishing file (backup_2016-07-31-0108_fy913m_f3270d0e488c-db-table-wp_postmeta.table.gz - 0.7 KB)
+0004.707 (0) Table wp_posts: Total expected rows (approximate): 60
+0004.876 (0) Table wp_posts: Total rows added: 53 in 0.17 seconds
+0004.878 (0) Table wp_posts: finishing file (backup_2016-07-31-0108_fy913m_f3270d0e488c-db-table-wp_posts.table.gz - 583.3 KB)
+0004.880 (0) Table wp_term_relationships: Total expected rows (approximate): 6
+0004.882 (0) Table wp_term_relationships: Total rows added: 6 in 0.00 seconds
+0004.883 (0) Table wp_term_relationships: finishing file (backup_2016-07-31-0108_fy913m_f3270d0e488c-db-table-wp_term_relationships.table.gz - 0.4 KB)
+0004.885 (0) Table wp_term_taxonomy: Total expected rows (approximate): 1
+0004.887 (0) Table wp_term_taxonomy: Total rows added: 1 in 0.00 seconds
+0004.887 (0) Table wp_term_taxonomy: finishing file (backup_2016-07-31-0108_fy913m_f3270d0e488c-db-table-wp_term_taxonomy.table.gz - 0.4 KB)
+0004.890 (0) Table wp_termmeta: Total expected rows (approximate): 0
+0004.891 (0) Table wp_termmeta: Total rows added: 0 in 0.00 seconds
+0004.892 (0) Table wp_termmeta: finishing file (backup_2016-07-31-0108_fy913m_f3270d0e488c-db-table-wp_termmeta.table.gz - 0.4 KB)
+0004.895 (0) Table wp_terms: Total expected rows (approximate): 1
+0004.896 (0) Table wp_terms: Total rows added: 1 in 0.00 seconds
+0004.897 (0) Table wp_terms: finishing file (backup_2016-07-31-0108_fy913m_f3270d0e488c-db-table-wp_terms.table.gz - 0.4 KB)
+0004.898 (0) Skipping table (lacks our prefix (wp_)): wechat_subscribers_lite_history
+0004.900 (0) backup_2016-07-31-0108_fy913m_f3270d0e488c-db-table-wp_options.table.gz (1/13): adding to final database dump
+0004.941 (0) backup_2016-07-31-0108_fy913m_f3270d0e488c-db-table-wp_users.table.gz (2/13): adding to final database dump
+0004.942 (0) backup_2016-07-31-0108_fy913m_f3270d0e488c-db-table-wp_usermeta.table.gz (3/13): adding to final database dump
+0004.943 (0) backup_2016-07-31-0108_fy913m_f3270d0e488c-db-table-wp_commentmeta.table.gz (4/13): adding to final database dump
+0004.944 (0) backup_2016-07-31-0108_fy913m_f3270d0e488c-db-table-wp_comments.table.gz (5/13): adding to final database dump
+0004.945 (0) backup_2016-07-31-0108_fy913m_f3270d0e488c-db-table-wp_links.table.gz (6/13): adding to final database dump
+0004.946 (0) backup_2016-07-31-0108_fy913m_f3270d0e488c-db-table-wp_postmeta.table.gz (7/13): adding to final database dump
+0004.947 (0) backup_2016-07-31-0108_fy913m_f3270d0e488c-db-table-wp_posts.table.gz (8/13): adding to final database dump
+0005.106 (0) backup_2016-07-31-0108_fy913m_f3270d0e488c-db-table-wp_term_relationships.table.gz (9/13): adding to final database dump
+0005.107 (0) backup_2016-07-31-0108_fy913m_f3270d0e488c-db-table-wp_term_taxonomy.table.gz (10/13): adding to final database dump
+0005.110 (0) backup_2016-07-31-0108_fy913m_f3270d0e488c-db-table-wp_termmeta.table.gz (11/13): adding to final database dump
+0005.111 (0) backup_2016-07-31-0108_fy913m_f3270d0e488c-db-table-wp_terms.table.gz (12/13): adding to final database dump
+0005.112 (0) backup_2016-07-31-0108_fy913m_f3270d0e488c-db.gz: finished writing out complete database file (736 KB)
+0005.119 (0) Total database tables backed up: 12 (backup_2016-07-31-0108_fy913m_f3270d0e488c-db.gz, size: 758977, checksum (SHA1): 51414cafd888ecfd70c15aa5954e2ca9a13b3fe9)
+0005.123 (0) backup_2016-07-31-0108_fy913m_f3270d0e488c-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0005.124 (0) backup_2016-07-31-0108_fy913m_f3270d0e488c-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0005.124 (0) backup_2016-07-31-0108_fy913m_f3270d0e488c-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0005.125 (0) backup_2016-07-31-0108_fy913m_f3270d0e488c-others.zip: others: This file has not yet been successfully uploaded: will queue
+0005.125 (0) backup_2016-07-31-0108_fy913m_f3270d0e488c-db.gz: db: This file has not yet been successfully uploaded: will queue
+0005.126 (0) Saving backup history. Total backup size: 11.8 MB
+0005.128 (0) Requesting upload of the files that have not yet been successfully uploaded (5)
+0005.130 (0) Cloud backup selection (1/1): email (last)
+0005.131 (0) Beginning dispatch of backup to remote (email)
+0005.131 (0) backup_2016-07-31-0108_fy913m_f3270d0e488c-plugins.zip: email to: fy913...
+0005.530 (0) Recording as successfully uploaded: backup_2016-07-31-0108_fy913m_f3270d0e488c-plugins.zip (ced1edebc5f02b1c68736ab7e08fa35e)
+0005.535 (0) Deleting local file: backup_2016-07-31-0108_fy913m_f3270d0e488c-plugins.zip: OK
+0005.536 (0) backup_2016-07-31-0108_fy913m_f3270d0e488c-themes.zip: email to: fy913...
+0005.665 (0) Recording as successfully uploaded: backup_2016-07-31-0108_fy913m_f3270d0e488c-themes.zip (48cfb59a14c56a7bf6835eb14bbca91d)
+0005.668 (0) Deleting local file: backup_2016-07-31-0108_fy913m_f3270d0e488c-themes.zip: OK
+0005.669 (0) backup_2016-07-31-0108_fy913m_f3270d0e488c-uploads.zip: email to: fy913...
+0005.688 (0) Recording as successfully uploaded: backup_2016-07-31-0108_fy913m_f3270d0e488c-uploads.zip (53ba1757e36eadc8ac09e8f1d69db805)
+0005.691 (0) Deleting local file: backup_2016-07-31-0108_fy913m_f3270d0e488c-uploads.zip: OK
+0005.692 (0) backup_2016-07-31-0108_fy913m_f3270d0e488c-others.zip: email to: fy913...
+0005.760 (0) Recording as successfully uploaded: backup_2016-07-31-0108_fy913m_f3270d0e488c-others.zip (dc0c7b7a513e0fdc34bc7ce834a540ff)
+0005.762 (0) Deleting local file: backup_2016-07-31-0108_fy913m_f3270d0e488c-others.zip: OK
+0005.763 (0) backup_2016-07-31-0108_fy913m_f3270d0e488c-db.gz: email to: fy913...
+0005.835 (0) Recording as successfully uploaded: backup_2016-07-31-0108_fy913m_f3270d0e488c-db.gz (787bed518b53acfdea45afb6d8647d87)
+0005.838 (0) Deleting local file: backup_2016-07-31-0108_fy913m_f3270d0e488c-db.gz: OK
+0005.840 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0005.841 (0) Number of backup sets in history: 3; groups (db): 1
+0005.841 (0) Examining (for databases) backup set with group_id=0, nonce=f3270d0e488c, datestamp=1469927281 (Jul 31 2016 01:08:01)
+0005.842 (0) This backup set is the backup set just made, so will not be deleted.
+0005.843 (0) Examining (for databases) backup set with group_id=0, nonce=f1502b9c87e1, datestamp=1469885805 (Jul 30 2016 13:36:45)
+0005.843 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0005.844 (0) Examining (for databases) backup set with group_id=0, nonce=ac1dd9ebeae0, datestamp=1469717066 (Jul 28 2016 14:44:26)
+0005.844 (0) 1469717066: db: this set includes a database (backup_2016-07-28-1444_fy913m_ac1dd9ebeae0-db.gz); db count is now 2
+0005.845 (0) 1469717066: db: over retain limit (2); will delete this database
+0005.845 (0) Delete file: backup_2016-07-28-1444_fy913m_ac1dd9ebeae0-db.gz, service=email
+0005.847 (0) This backup set remains non-empty (f=1/d=0); will retain in history
+0005.847 (0) Number of backup sets in history: 3; groups (files): 1
+0005.848 (0) Examining (for files) backup set with nonce=f3270d0e488c, datestamp=1469927281 (Jul 31 2016 01:08:01)
+0005.848 (0) This backup set is the backup set just made, so will not be deleted.
+0005.849 (0) This backup set is the backup set just made, so will not be deleted.
+0005.849 (0) This backup set is the backup set just made, so will not be deleted.
+0005.849 (0) This backup set is the backup set just made, so will not be deleted.
+0005.849 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0005.850 (0) Examining (for files) backup set with nonce=f1502b9c87e1, datestamp=1469885805 (Jul 30 2016 13:36:45)
+0005.851 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0005.851 (0) Examining (for files) backup set with nonce=ac1dd9ebeae0, datestamp=1469717066 (Jul 28 2016 14:44:26)
+0005.852 (0) plugins: over retain limit (2); will delete this file entity
+0005.852 (0) themes: over retain limit (2); will delete this file entity
+0005.853 (0) uploads: over retain limit (2); will delete this file entity
+0005.853 (0) others: over retain limit (2); will delete this file entity
+0005.854 (0) Delete file: backup_2016-07-28-1444_fy913m_ac1dd9ebeae0-plugins.zip, service=email
+0005.854 (0) Delete file: backup_2016-07-28-1444_fy913m_ac1dd9ebeae0-themes.zip, service=email
+0005.855 (0) Delete file: backup_2016-07-28-1444_fy913m_ac1dd9ebeae0-uploads.zip, service=email
+0005.855 (0) Delete file: backup_2016-07-28-1444_fy913m_ac1dd9ebeae0-others.zip, service=email
+0005.857 (0) This backup set is now empty; will remove from history
+0005.857 (0) Deleting log file (log.ac1dd9ebeae0.txt)
+0005.858 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0005.860 (0) Resume backup (f3270d0e488c, 0): finish run
+0005.862 (0) Decremented the semaphore (fd) by 1
+0005.863 (0) Semaphore (fd) unlocked
+0005.863 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0005.866 (0) Fetching RSS news feed
+0005.887 (0) Fetched RSS news feed; result is a: SimplePie
+0005.889 (0) Sending email ('Files and database (Full backup)') report (attachments: 0, size: 0 KB) to: fy913...
+0005.930 (0) The backup apparently succeeded and is now complete
