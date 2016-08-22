@@ -3,7 +3,13 @@
  * Settings Page, It's required by WPWSLGeneral Class only.
  *
  */
+$options=get_option(WPWSL_SETTINGS_OPTION);
+global $token;
+$token=isset($options['token'])?$options['token']:'';
+
+
 require_once( 'class-wpwsl-list-table.php' );
+require_once( 'wx.class.php' );
 
 if(isset($_GET['action']) && isset($_GET['action2'])){
 	if($_GET['action']=='delete' || $_GET['action2']=='delete'){
@@ -36,34 +42,39 @@ $raw=get_posts($args);
 
 $weixin_menu = ($_POST['weixin_menu']);
 
-$post_data = ($weixin_menu);
+
+
+
+$post_data = $weixin_menu;
 if($post_data){
 
-    //AppID(应用ID)wx7eb470b5b3f72020
-//AppSecret(应用密钥)cb51f63f5939469cd974c50364c1863e 隐藏 重置
-    $appid = 'wx7eb470b5b3f72020';
-    $apsecret = 'cb51f63f5939469cd974c50364c1863e';
-    $url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={$appid}&secret={$apsecret}";
+    $post_data = stripslashes($post_data);
 
-    $get_accesstoken = file_get_contents($url);
+    $wx = new WXTest($token);
 
-    $arr = json_decode($get_accesstoken,true);
-
-    $access_token = $arr['access_token'];
+    $access_token = $wx->getAccessToken();
 
     $url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token={$access_token}";
 
     $ch = curl_init();
+
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-// post数据
+
+    // post数据
     curl_setopt($ch, CURLOPT_POST, 1);
-// post的变量
-    curl_setopt($ch, CURLOPT_POSTFIELDS, json_decode($post_data,true));
+    // post的变量
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
     $output = curl_exec($ch);
     curl_close($ch);
-//打印获得的数据
-    print_r($output);
+    //打印获得的数据
+    $output = json_decode($output);
+    if($output->errcode){
+        echo '失败';
+        exit;
+    }
+
+
 }
 
 

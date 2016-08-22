@@ -1,28 +1,9 @@
 <?php
+
 /**
  * WeChat Interface for WeChat Subscribers Lite
  */
-
-global $token;
-
-if (isset($_GET["debug"])) {
-    define('IS_DEBUG', true);
-} else {
-    define('IS_DEBUG', false);
-}
-
-$wechatObj = new wechatCallbackapi($token);
-
-$valid = $wechatObj->valid();
-
-if ($valid) {
-    $wechatObj->responseMsg(get_data());
-} else {
-    header('Location: ' . home_url());
-}
-exit;
-
-class wechatCallbackapi
+class WXTest
 {
 
     private $token;
@@ -202,6 +183,38 @@ class wechatCallbackapi
         //header('Location: '. $url);
     }
 
+    /**
+     * 自定义菜单
+     * @param $menujson json字符串
+     */
+    public function createMenu($menujson){
+        //$post_data = stripslashes($post_data);
+
+        $access_token = $this->getAccessToken();
+
+        $url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token={$access_token}";
+
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        // post数据
+        curl_setopt($ch, CURLOPT_POST, 1);
+        // post的变量
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $menujson);
+        $output = curl_exec($ch);
+        curl_close($ch);
+        //打印获得的数据
+        $output = json_decode($output);
+        if($output->errcode){
+            echo '失败';
+            exit;
+        }
+    }
+
+
+
+    //==================== old ===================================//
+
     public function load($_data)
     {
         $this->data = $_data;
@@ -229,7 +242,6 @@ class wechatCallbackapi
         if ($_data != null) {
             $this->load($_data);
         }
-
 
         //get post data, May be due to the different environments
         if (IS_DEBUG) {
@@ -373,124 +385,10 @@ class wechatCallbackapi
                 $messages = $this->getSearchPosts($d->key[0], $d->remsg);
                 $resultStr = $this->sendMsgBase($fromUsername, $toUsername, $messages);
                 break;
-            default :
-                //$messages = $this->getSearchPosts($d->key[0], $d->remsg);
-                $first = '朋友';
-                $number = '20';
-                $link = 'http://www.bing.com';
-                $resultStr = $this->sendTPLmsg( $fromUsername,$first,$number,$link);
-//                break;
-//            default: //text
-                //$resultStr = $this->sendMsg($fromUsername, $toUsername, $resultStr);
+            default: //text
+                $resultStr = $this->sendMsg($fromUsername, $toUsername, $d->msg);
         }
 
-        return $resultStr;
-    }
-
-    //https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=ACCESS_TOKEN
-    /**
-     * 获取微信服务器IP地址
-     */
-    public function getcallbackip()
-    {
-        $url = "https://api.weixin.qq.com/cgi-bin/getcallbackip?access_token=ACCESS_TOKEN";
-    }
-
-    /**
-     *
-     * @param $toUsername
-     * @param $first
-     * @param $number
-     * @param $link
-     */
-    private function sendTPLmsg($toUsername,$first,$number,$link){
-        $json = $this->getTPL1($toUsername,$first,$number,$link);
-        $access_token = $this->getAccessToken();
-
-        $url = "https://api.weixin.qq.com/cgi-bin/message/template/send?access_token={$access_token}";
-
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        // post数据
-        curl_setopt($ch, CURLOPT_POST, 1);
-        // post的变量
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
-        $output = curl_exec($ch);
-        curl_close($ch);
-
-        if($_COOKIE['debug']){
-            //打印获得的数据
-            $output = ($output);
-            return $output;
-        }
-
-    }
-
-    /**
-     * 提示复习
-     * @param $toUsername
-     * @param $first
-     * @param $number
-     * @param $link
-     * @return string
-     */
-    private function getTPL1($toUsername,$first,$number,$link){
-        $textTpl = '{
-            "touser":"%s",
-            "template_id":"YozxPMlfu293dZNflWYXgUTzS7HyVZPW0jg2Ev79nJk",
-            "url":"%s",
-            "topcolor":"#FF0000",
-            "data":{
-                "first": {
-                    "value":"%s",
-                    "color":"#173177"
-                },
-                "number":{
-                    "value":"%s",
-                    "color":"#173177"
-                },
-                "link": {
-                    "value":"%s",
-                    "color":"#173177"
-                }
-            }
-        }';
-        $resultStr = sprintf($textTpl,
-            $toUsername,
-            $link,
-            $first,
-            $number,
-            $link);
-        return $resultStr;
-    }
-
-    private function sendImageMsg($fromUsername, $toUsername, $mediaId = 'image010.jpg')
-    {
-
-        if ($mediaId == '') {
-            return '';
-        }
-
-        $textTpl = "<xml>
-                    <ToUserName><![CDATA[%s]]></ToUserName>
-                    <FromUserName><![CDATA[%s]]></FromUserName>
-                    <CreateTime>%s</CreateTime>
-                    <MsgType><![CDATA[%s]]></MsgType>
-                    <Image>
-                    <MediaId><![CDATA[%s]]></MediaId>
-                    </Image>
-                    </xml>
-                    <xml>";
-
-        $msgType = "image";
-        $time = time();
-        $resultStr = sprintf($textTpl,
-            $fromUsername,
-            $toUsername,
-            $time,
-            $msgType,
-            $mediaId);
         return $resultStr;
     }
 
@@ -587,21 +485,9 @@ class wechatCallbackapi
         }
         $args['post_status'] = "publish";
 
-        // $args['tag'] = $keyword;
-        // $posts = get_posts($args);
-        //
-        // $more_count = $re_count - count($posts);
-        //
-        // if($more_count <= 0){
-        //   return $posts;
-        // }
-        // unset($array['tag']);
-
         $args['posts_per_page'] = $re_count;
         $args['s'] = $keyword;
         $posts = get_posts($args);
-
-        // return array_merge($posts, $more_posts);
         return $posts;
     }
 
@@ -854,4 +740,3 @@ function get_data()
     return $data;
 }
 
-?>
